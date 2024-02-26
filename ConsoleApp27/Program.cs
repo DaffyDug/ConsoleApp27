@@ -1,14 +1,4 @@
 ﻿using System;
-
-
-
-
-
-
-//Разработайте систему управления персонажами в игре, где абстрактный класс Character будет содержать общие атрибуты и методы,
-//такие как name, health, attack(), и defend(). Создайте несколько конкретных классов (3 и более), таких как Warrior, Mage,
-//и Rogue, которые будут наследоваться от Character и реализовывать свои уникальные способности атаки и защиты.
-
 class Program
 {
     static void Main(string[] args)
@@ -41,17 +31,14 @@ public abstract class Character
 public class Warrior : Character
 {
     public override string _name => "Воин";
-
     public override void attack()
     {
         Console.WriteLine("нанесен урон");
     }
-
     public override void defend()
     {
         Console.WriteLine("урон поглощен");
     }
-
     public override void health()
     {
         Console.WriteLine("прибавилось здоровье");
@@ -60,17 +47,14 @@ public class Warrior : Character
 public class Mage : Character
 {
     public override string _name => "могучий маг";
-
     public override void attack()
     {
         Console.WriteLine("огненный шар");
     }
-
     public override void defend()
     {
         Console.WriteLine("невидимый шит сработал, урон поглощен");
     }
-
     public override void health()
     {
         Console.WriteLine("лечебное зелье");
@@ -79,17 +63,14 @@ public class Mage : Character
 public class Rogue : Character
 {
     public override string _name => "ах ты негодник";
-
     public override void attack()
     {
         Console.WriteLine("разбитая бутылка");
     }
-
     public override void defend()
     {
         Console.WriteLine("коробка сойдет ?");
     }
-
     public override void health()
     {
         Console.WriteLine("ПИВАС, чинезес");
